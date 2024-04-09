@@ -16,7 +16,6 @@ class bot_control:
         self.pub = rospy.Publisher('/spot/cmd_vel' , Twist , queue_size = 10)
         self.state = rospy.Subscriber('/gazebo/model_states', ModelStates, self.callback)
         self.P = 0.004 #rospy.get_param("line_follower_controller/pid/p")
-        self._stop = False
 
     
       #self.image_sub = Line_Follower()
