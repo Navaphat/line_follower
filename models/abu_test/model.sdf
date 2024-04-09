@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="abu_field_new">
+    <static>1</static>
+    <link name="link">
+        <!-- <inertial>
+            <pose>0.03 0 0.035 0 0 0</pose>
+            <mass>5.0</mass>
+            <inertia>
+                <ixx>0.041734209</ixx>
+                <ixy>0.0</ixy>
+                <ixz>0.0</ixz>
+                <iyy>0.061814814</iyy>
+                <iyz>0.0</iyz>
+                <izz>0.084874024</izz>
+            </inertia>
+        </inertial> -->
+        
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://abu_old/meshes/field.dae</uri>
+            <scale>1.2 1.2 1.2</scale>
+          </mesh>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>30.0</mu>
+              <mu2>30.0</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <max_depth>0</max_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://abu_old/meshes/field.dae</uri>
+            <scale>1.2 1.2 1.2</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <velocity_decay>
+        <linear>0.000000</linear>
+        <angular>0.000000</angular>
+      </velocity_decay>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,14 @@
+<launch>
+    <node pkg="gazebo_ros" 
+    type="spawn_model" 
+    name="spawn_field"  
+    args="-sdf -model robocup14_spl_field -file /home/navaphat/.gazebo/models/robocup14_spl_field/model-1_4.sdf" />
+</launch>
+
+
+
+
+
+
+
+<!-- "-sdf -model abu_field -x -7.951665 -y -5.565570 -z 0.020985 -file /home/navaphat/project_ws/src/line_follower/models/abu_old/model.sdf" -->

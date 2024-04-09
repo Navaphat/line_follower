@@ -1,0 +1,14 @@
+<launch>
+    <!-- Empty world -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find champ_setup_assistant)/templates/default.world"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="true" />
+        <arg name="headless" value="false" />
+        <arg name="debug" value="false" />
+        <arg name="paused" value="false" />
+    </include>
+
+    <include file="$(find line_follower)/launch/spawn_robot.launch" />
+    <include file="$(find line_follower)/launch/spawn_field.launch"/>
+</launch>
